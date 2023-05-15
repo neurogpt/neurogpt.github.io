@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- Block diagram -->
-<object data="assets/pdf/NeuroGPT_bam_cropped.pdf" type="application/pdf">
+<object data="assets/pdf/NeuroGPT_bam_cropped.pdf" type="application/pdf"></object>
 
 <!-- Abstract -->
 <h2 style="text-align: center;">Abstract</h2>
@@ -13,10 +13,10 @@ layout: default
 
 
 <h2 style="text-align: center;">Method</h2>
-<object data="assets/pdf/Grand_figure.pdf" type="application/pdf">
-<object data="assets/pdf/Clusters_Compressed.pdf" type="application/pdf">
-<object data="assets/pdf/Text2Neural.drawio.pdf" type="application/pdf">
-<object data="assets/pdf/Text2Neural_1.drawio.pdf" type="application/pdf">
+<object data="assets/pdf/Grand_figure.pdf" type="application/pdf"></object>
+<object data="assets/pdf/Clusters_Compressed.pdf" type="application/pdf"></object>
+<object data="assets/pdf/Text2Neural.drawio.pdf" type="application/pdf"></object>
+<object data="assets/pdf/Text2Neural_1.drawio.pdf" type="application/pdf"></object>
 <!-- ![text2neural](assets/svg/Text2Neural_Grid_Diagram_wo_legends.svg) -->
 
 <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
