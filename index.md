@@ -12,6 +12,7 @@ layout: default
 
 <h2 style="text-align: center;">Method and Results</h2>
 
+
 ![grand_figure](assets/images/grand_figure.PNG)
 <h3 style="text-align: center">Overview of the Microns Dataset</h3>
 <p style="text-align: justify">[Description goes here]</p>
