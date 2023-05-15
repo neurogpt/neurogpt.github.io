@@ -1,5 +1,7 @@
 title: NeuroGPT
 description: 
 show_downloads: true
+github.is_project_page: true
+github.repository_url: https://github.com/neurogpt/neurogpt.github.io
 google_analytics:
 theme: jekyll-theme-cayman
