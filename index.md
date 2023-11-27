@@ -5,7 +5,7 @@ layout: default
 ![block_diagram](assets/images/block_diagram.PNG)
 
 <h2 style="text-align: center;">Abstract</h2>
-<p style="text-align: justify">Understanding the neural transformation of visual perception is a fundamental challenge in neuroscience, and one that has the potential to revolutionize AI model design. In this study, we present a novel embedding manifold to map the neural representations for natural image stimuli in the mouse visual cortex to the text embeddings, using state-of-the-art multimodal language models. Specifically, we processed anatomical and functional neural responses from various sub-regions of the mouse visual cortex and presented the same natural image stimuli to a range of image-to-text models and learned a mapping from the corresponding text embeddings to neural representations. Our results show a strong relationship between text and neural embeddings in the latent space, resulting in a text representation of neural language. To further test the decoding capacity of our neural language, we feed the encoded text-to-neural representations to a variety of state-of-the-art text-to-image models, such as Stable Diffusion, and observe a powerful regeneration of visual representations, capturing the key visual features presented as input stimuli to the mouse visual cortex. The performance of the reconstruction from the text-to-image models is proportional to the neural language encoding capacity of image-to-text models and shows a similar map of neural activations in the mouse visual cortex. This study is the first of its kind to introduce a language of mouse visual cortex neurons encoded through generative AI models, and has significant implications for both AI and neuroscience. By mapping neural representations for a given image to a text embedding space, we gain insights into the underlying structure of visual information processing in mouse as well as its functional similarity with the multimodal language models. We believe this approach has several potential applications in understanding the information processing in the mouse brain and building the next generation of AI models.</p>
+<p style="text-align: justify">Understanding the relationship between the visual sensory experience and neuronal ensembles in the brain has been the avant-garde of neuroscience, a challenge that has the potential to revolutionize Human-Computer-Interaction (HCI). A prime utility of this idea is a language-guided visual response alignment, which allows us to relay the visual features through the medium of text, resulting in a personalised HCI system for visually-impaired subjects. With the recent advancements in Generative Multimodal Networks, the utilization of image captioning models can play a vital role in realising this system. However, to test its performance, a neural encoding benchmark is required to compare the performance of image captioning models in generating meaningful yet biologically-grounded captions for the presented visual stimuli. In this study, we present a novel benchmarking technique (\textit{NeuroGPT}) to systematically evaluate the biological alignment of image captioning models in pairing their feature representations with their biological counterparts i.e. visual neurons. As a test case for HCI, we demonstrate the performance of NeuroGPT by analysing the data on primates and rodents where thousands of images are presented and neural responses are recorded. We discover GIT and ClipCap as benchmarking image captioning models with the strongest alignment to the biological visual neurons and the highest sensitivity in encoding visual features in their latent space. These models are also observed to provide a high performance on real-world image captioning tasks. Our work broadly contributes towards the design of neuro-inspired generative multimodal networks with unlimited applications for vision applications in HCI and healthcare through natural language-guided visual therapy.</p>
 
 <h2 style="text-align: center;">Video</h2>
 <p style="text-align: center">[Demo video coming soon]</p>
@@ -13,41 +13,31 @@ layout: default
 <h2 style="text-align: center;">Method and Results</h2>
 
 
-<h3 style="text-align: center">Overview of the Microns Dataset</h3>
+<h3 style="text-align: center">Text2Neural Pipeline</h3>
 
-![grand_figure](assets/images/grand_figure.PNG)
-<p style="text-align: justify">The complete data profile is shown with overall connectivity of neurons in (a) as well as MVC shortlisted sub-regions (b-e). The spikes on the chord plot shows the highest active neurons for 10 sample stimuli. The anatomical EM data sample is shown in (f) with the corresponding segmentations of the neuron and connections’ in (g). The sub-region based connectivity is plotted in (h) and the total number of neurons captured in the data are plotted in (i). Sample neural representations (response profile) of 15 neurons against natural movie input stimuli is plotted in (j)</p>
-
-<br />
-<br />
-
-
-<h3 style="text-align: center">UMAP clusters representing performance of ImageToText models</h3>
-
-![clusters](assets/images/clusters.PNG)
-<p style="text-align: justify">UMAP embedding visualization of word2vec generated embeddings of text tokens generated
-from each image2text model for the entire Natural Movie Clips dataset</p>
+![grand_figure](assets/images/fig1.png)
+<p style="text-align: justify">Block diagram framework of NeuroGPT: **A** shows that input frames are passed to the image captioning model and are presented to the animal subject. The corresponding neural responses from the visual cortex of the animal subject are mapped to the text tokens (captions) as shown in **B**. To map the visual neurons with the text tokens representing visual features, **C** shows a section of the dataframe for a particular image2text model, which contains the mapping frequency between neuron IDs and text tokens. The neuron with the highest mapping frequency is assigned to that token.</p>
 
 <br />
 <br />
 
 
-<h3 style="text-align: center">Performance of ImageToText models at encoding neural responses</h3>
+<h3 style="text-align: center">Image2Text Models' performance on the MICrONS Mouse Visual Cortex dataset</h3>
 
-![text2neural](assets/images/text2neural.PNG)
-<p style="text-align: justify">Percentage of winning of each image2text model across all text tokens towards text2neural
-mapping/session. A threshold sweep (1-22 minimum unique text tokens) is applied to observe the
-winning frequency of the models for the text tokens’ thresholding criteria from lower (1 - black) to
-higher and stringent (22 - yellow)</p>
+![clusters](assets/images/fig2.png)
+<p style="text-align: justify">**A**. UMAP representations of ten image captioning models over the entire unique captions generated by the visual stimuli are shown. **B**. The alignment of biologically active neurons over presenting the similar visual stimuli from mouse dataset is shown, drawn from all the sessions (video clips). **C**. The benchmarking performance of each image captioning model with maximum alignment of the text representations to the biologically active neurons is shown. **D**. The quantitaive performance of image captioning models in systematically mapping the input images to unique captions is presented. **E**. Sample biological neurons with their mapping on unique text tokens is visualized (colors correspond to different text tokens and length corresponds to their mapping alignment. **F**. Top: Activation maps on different images for specific text captions with the highlighted token. Bottom: Image reconstruction by presenting the input text caption to a sample text2image reconstruction model.</p>
 
 <br />
 <br />
 
 
-<h3 style="text-align: center">Distribution of word tokens for randomly sampled neurons</h3>
+<h3 style="text-align: center">Similar analysis on the Primate Dataset</h3>
 
-![text2neural2](assets/images/text2neural2.PNG)
-<p style="text-align: justify">Text2neural mapping: encoding frequency of unique text tokens on random neurons (e.g.
-bottom right neuron encode "black", "photo", "border", "and" and "outdoors" as top 5 tokens)</p>
+![text2neural](assets/images/fig3.png)
+<p style="text-align: justify">**A**. The benchmarking performance of each image captioning model with maximum alignment of the text representations to the biologically active neurons in primate brain is shown. **B**. The quantitative performance of image captioning models in systematically mapping the input images to unique captions is presented for the primate visual cortex.</p>
+
+<br />
+<br />
+
 
 <!-- <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script> -->
