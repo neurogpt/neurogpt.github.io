@@ -11,10 +11,10 @@ layout: default
 <h2 style="text-align: center;">Method and Results</h2>
 
 
-<h3 style="text-align: center">Text2Neural Pipeline</h3>
+<h3 style="text-align: center">NeuroGPT Pipeline</h3>
 
 <img src="assets/svg/fig1.svg" width="100%">
-<p style="text-align: justify">Block diagram framework of NeuroGPT: <strong>A</strong> shows that input frames are passed to the image captioning model and are presented to the animal subject. The corresponding neural responses from the visual cortex of the animal subject are mapped to the text tokens (captions) as shown in <strong>B</strong>. To map the visual neurons with the text tokens representing visual features, <strong>C</strong> shows a section of the dataframe for a particular image2text model, which contains the mapping frequency between neuron IDs and text tokens. The neuron with the highest mapping frequency is assigned to that token.</p>
+<p style="text-align: justify">Block diagram framework of NeuroGPT: <strong>A</strong> shows that input frames are passed to the image captioning model and are presented to the animal subject. The corresponding neural responses from the visual cortex of the animal subject are mapped to the text tokens (captions) as shown in <strong>B</strong>. To map the visual neurons with the text tokens representing visual features, <strong>C</strong> shows a section of the dataframe for a particular image2text model, which contains the mapping frequency between neuron IDs and text tokens. The neuron with the highest mapping frequency is assigned to that token. <strong>D</strong> represents the text2image module, where the caption generated in section B is fed to a text2image model which generates an image based on the caption.</p>
 
 <br />
 <br />
